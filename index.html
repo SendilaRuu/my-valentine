@@ -177,35 +177,27 @@ margin-bottom:10px;
 
 .lockHeader {
     position: absolute;
-    top: 30px; /* some space from top */
+    top: 30px; /* distance from top */
     width: 100%;
     text-align: center;
-    font-family: 'Poppins', sans-serif; /* clean and elegant */
-    font-size: 36px; /* big but not huge */
-    font-weight: 600; /* semi-bold */
-    color: #ff7eb9; /* soft pink */
-    text-shadow: 1px 1px 6px rgba(0,0,0,0.6); /* subtle shadow for readability */
-    line-height: 1.3;
     z-index: 2100;
 }
 
 .lockHeader span {
-    font-family: 'Great Vibes', cursive; /* optional: make “HEY MY PRINCESS RUU” cursive */
     display: block;
-    font-size: 42px;
+    font-family: 'Great Vibes', cursive; /* fancy font */
+    font-size: 48px; /* bigger size for both lines */
     font-weight: 400;
-    color: #ff4fa3;
+    color: #ff4fa3; /* soft pink */
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6); /* shadow for readability */
+    line-height: 1.2;
 }
 
 @media screen and (max-width: 600px) {
-    .lockHeader {
-        font-size: 24px;
-    }
     .lockHeader span {
-        font-size: 28px;
+        font-size: 32px; /* responsive for mobile */
     }
 }
-
 
     
 input{
@@ -359,12 +351,11 @@ font-size:17px;
 <source src="music.mp3" type="audio/mp3">
 </audio>
 
-<!-- LOCK SCREEN -->
-<div id="lockScreen">
-    <div class="lockHeader">
-        HEY MY PRINCESS RUU ❤️‍🔥<span>
-        HAPPY VALENTINE'S DAY PUK IRI 💘🌊
-    </div>
+<div class="lockHeader">
+    <span>HEY MY PRINCESS RUU ❤️‍🔥</span>
+    <span>HAPPY VALENTINE'S DAY PUK IRI 💘🌊</span>
+</div>
+
     
     <div class="lockBox">
         <h2>Enter Our Secret Date ❤️</h2>
