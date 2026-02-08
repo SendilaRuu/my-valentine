@@ -175,6 +175,27 @@ font-size:34px;
 margin-bottom:10px;
 }
 
+.lockHeader {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px; /* big */
+    font-weight: bold;
+    color: #ff4fa3; /* pink */
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    line-height: 1.2;
+    z-index: 2100; /* above the lock box */
+}
+
+@media screen and (max-width: 600px) {
+    .lockHeader {
+        font-size: 32px; /* responsive for mobile */
+    }
+}
+
+    
 input{
 padding:14px;
 border-radius:30px;
@@ -328,14 +349,20 @@ font-size:17px;
 
 <!-- LOCK SCREEN -->
 <div id="lockScreen">
-  <div class="lockBox">
-    <h2>Enter Our Secret Date ❤️</h2>
-    <p style="opacity:.8;font-size:14px;">(Enter the date that changed everything)</p>
-    <input type="password" id="code" placeholder="yyyy.mm.dd">
-    <button onclick="checkCode()">Unlock</button>
-    <p id="error" style="color:#ff9aa2;margin-top:10px;"></p>
-  </div>
+    <div class="lockHeader">
+        HEY MY PRINCESS RUU <br>
+        HAPPY VALENTINE'S DAY PUK IRI
+    </div>
+    
+    <div class="lockBox">
+        <h2>Enter Our Secret Date ❤️</h2>
+        <p style="opacity:.8;font-size:14px;">(Enter the date that changed everything)</p>
+        <input type="password" id="code" placeholder="yyyy.mm.dd">
+        <button onclick="checkCode()">Unlock</button>
+        <p id="error" style="color:#ff9aa2;margin-top:10px;"></p>
+    </div>
 </div>
+
 
 <!-- START HERE -->
 <div id="start" class="page">
