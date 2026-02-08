@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Only For You ❤️</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
@@ -177,25 +179,32 @@ margin-bottom:10px;
 
 .lockHeader {
     position: absolute;
-    top: 30px; /* distance from top */
+    top: 30px; /* space from top */
     width: 100%;
     text-align: center;
     z-index: 2100;
 }
 
-.lockHeader span {
-    display: block;
-    font-family: 'Great Vibes', cursive; /* fancy font */
-    font-size: 48px; /* bigger size for both lines */
-    font-weight: 400;
+.lockHeader .line1,
+.lockHeader .line2 {
+    font-family: 'Bebas Neue', sans-serif; /* Bebas font */
+    font-size: 60px; /* big size */
     color: #ff4fa3; /* soft pink */
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.6); /* shadow for readability */
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6); /* subtle shadow */
     line-height: 1.2;
 }
 
+.lockHeader .line2 {
+    font-size: 50px; /* slightly smaller than first line */
+    margin-top: 10px; /* spacing between lines */
+}
+
 @media screen and (max-width: 600px) {
-    .lockHeader span {
-        font-size: 32px; /* responsive for mobile */
+    .lockHeader .line1 {
+        font-size: 36px;
+    }
+    .lockHeader .line2 {
+        font-size: 30px;
     }
 }
 
@@ -351,13 +360,15 @@ font-size:17px;
 <source src="music.mp3" type="audio/mp3">
 </audio>
 
-<div class="lockHeader">
-    <span>HEY MY PRINCESS RUU ❤️‍🔥</span>
-    <span>HAPPY VALENTINE'S DAY PUK IRI 💘🌊</span>
-</div>
+<!-- LOCK SCREEN -->
+<div id="lockScreen">
+    <div class="lockHeader">
+        HEY MY PRINCESS RUU ❤️‍🔥<br>
+        HAPPY VALENTINE'S DAY PUK IRI 💘🌊
+    </div>
 
     
-    <div class="lockBox">
+<div class="lockBox">
         <h2>Enter Our Secret Date ❤️</h2>
         <p style="opacity:.8;font-size:14px;">(Enter the date that changed everything)</p>
         <input type="password" id="code" placeholder="yyyy.mm.dd">
