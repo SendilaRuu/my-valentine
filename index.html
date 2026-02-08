@@ -179,7 +179,7 @@ margin-bottom:10px;
 
 .lockHeader {
     position: absolute;
-    top: 20px; /* distance from top */
+    top: 20px;       /* distance from top */
     width: 100%;
     text-align: center;
     z-index: 2100;
@@ -191,30 +191,28 @@ margin-bottom:10px;
     font-weight: 700; /* bold */
     text-transform: uppercase;
     color: #ff4fa3;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    text-shadow: 3px 3px 12px rgba(0,0,0,0.7); /* shadow for visibility */
     line-height: 1.1;
 }
 
 .lockHeader .line1 {
-    font-size: 90px; /* big */
+    font-size: 120px; /* MASSIVE and eye-catching */
 }
 
 .lockHeader .line2 {
-    font-size: 70px; /* slightly smaller */
-    margin-top: 10px;
+    font-size: 90px; /* big but slightly smaller */
+    margin-top: 15px;
 }
 
 /* Responsive for mobile */
 @media screen and (max-width: 600px) {
     .lockHeader .line1 {
-        font-size: 40px;
+        font-size: 50px;
     }
     .lockHeader .line2 {
-        font-size: 30px;
+        font-size: 40px;
     }
 }
-
-
     
 input{
 padding:14px;
@@ -367,15 +365,15 @@ font-size:17px;
 <source src="music.mp3" type="audio/mp3">
 </audio>
 
-<!-- LOCK SCREEN -->
 <div id="lockScreen">
+    <!-- LOCK HEADER -->
     <div class="lockHeader">
-        HEY MY PRINCESS RUU ❤️‍🔥<br>
-        HAPPY VALENTINE'S DAY PUK IRI 💘🌊
+        <div class="line1">HEY MY PRINCESS RUU ❤️‍🔥</div>
+        <div class="line2">HAPPY VALENTINE'S DAY PUK IRI 💘🌊</div>
     </div>
 
-    
-<div class="lockBox">
+    <!-- LOCK BOX -->
+    <div class="lockBox">
         <h2>Enter Our Secret Date ❤️</h2>
         <p style="opacity:.8;font-size:14px;">(Enter the date that changed everything)</p>
         <input type="password" id="code" placeholder="yyyy.mm.dd">
@@ -383,6 +381,7 @@ font-size:17px;
         <p id="error" style="color:#ff9aa2;margin-top:10px;"></p>
     </div>
 </div>
+
 
 
 <!-- START HERE -->
