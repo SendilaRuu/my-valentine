@@ -179,7 +179,7 @@ margin-bottom:10px;
 
 .lockHeader {
     position: absolute;
-    top: 30px; /* distance from top */
+    top: 20px; /* distance from top */
     width: 100%;
     text-align: center;
     z-index: 2100;
@@ -187,29 +187,30 @@ margin-bottom:10px;
 
 .lockHeader .line1,
 .lockHeader .line2 {
-    font-family: 'Bebas Neue', sans-serif; /* fancy header font */
-    font-weight: 700; /* make it bold */
-    color: #ff4fa3; /* soft pink */
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.6); /* subtle shadow */
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 700; /* bold */
+    text-transform: uppercase;
+    color: #ff4fa3;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
     line-height: 1.1;
-    text-transform: uppercase; /* optional, looks clean */
 }
 
 .lockHeader .line1 {
-    font-size: 80px; /* very big for main line */
+    font-size: 90px; /* big */
 }
 
 .lockHeader .line2 {
-    font-size: 60px; /* slightly smaller, still big */
-    margin-top: 15px; /* spacing between lines */
+    font-size: 70px; /* slightly smaller */
+    margin-top: 10px;
 }
 
+/* Responsive for mobile */
 @media screen and (max-width: 600px) {
     .lockHeader .line1 {
-        font-size: 44px;
+        font-size: 40px;
     }
     .lockHeader .line2 {
-        font-size: 34px;
+        font-size: 30px;
     }
 }
 
