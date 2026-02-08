@@ -17,58 +17,57 @@ overflow-x:hidden;
 }
 
 /* BANNER PHOTO */
-.banner{
-    position:relative;
-    width:90%;
-    max-width:720px;
-    margin:30px auto;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 10px 35px rgba(255,105,180,0.4);
+.banner {
+    position: relative;
+    width: 100%;
+    max-width: 1000px; /* adjust max width if needed */
+    margin: 40px auto;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
-.banner img{
-    width:100%;
-    display:block;
+.banner img {
+    width: 100%;
+    height: auto; /* keep aspect ratio */
+    display: block;
 }
 
-/* semi-transparent overlay */
-.bannerOverlay{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background: rgba(0,0,0,0.35); /* light black overlay for clarity */
-    pointer-events:none;
+.bannerOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.35); /* light black transparent */
 }
 
-/* text on banner */
-.bannerText{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    text-align:center;
-    pointer-events:none;
+.bannerText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    width: 90%;
+    padding: 0 10px;
 }
 
-.bannerText .mainText{
-    font-family:'Great Vibes',cursive;
-    font-size:56px;
-    color:#ff6a85; /* change color of US ❤️ */
-    text-shadow: 2px 2px 12px rgba(0,0,0,0.7);
-    margin-bottom:10px;
+.bannerText .mainText {
+    font-family: 'Great Vibes', cursive;
+    font-size: 64px; /* big for “US ❤️” */
+    font-weight: bold;
+    color: #ff4fa3; /* pink color */
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    margin-bottom: 10px;
 }
 
-.bannerText .subText{
-    font-family:'Poppins',sans-serif;
-    font-size:18px;
-    color:#fff;
-    text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
-    font-style:italic;
+.bannerText .subText {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px; /* very small */
+    color: #fff;
+    opacity: 0.9;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
 }
-
 
 
 /* ---------- MENU ---------- */
@@ -414,9 +413,18 @@ Every photo here tells a story — laughs we shared, days we survived together, 
 
 <!-- GALLERY -->
 <div class="gallery">
-<img src="images/1.jpg"><div class="caption">Our First Pic 📸  — 2024.11.18</div>
+<img src="images/1.jpg"><div class="caption">Our First Pic 📸 — 2024.11.18</div>
 <img src="images/2.jpg"><div class="caption">APT APT 😂💘 — 2024.12.02</div>
-<!-- ... rest of your images ... -->
+<img src="images/3.jpg"><div class="caption">Pizza Hut 🍕 — 2024.12.02</div>
+<img src="images/4.jpg"><div class="caption">Campus Eke 🎀 — 2024.12.03</div>
+<img src="images/5.jpg"><div class="caption">Dominos 😎 — 2024.12.09</div>
+<img src="images/6.jpg"><div class="caption">Dominos 🍕 — 2024.12.09</div>
+<img src="images/7.jpg"><div class="caption">Galpoththa 🌊 — 2024.12.17</div>
+<img src="images/8.jpg"><div class="caption">Vito Mug Day 🍵 — 2024.12.29</div>
+<img src="images/9.jpg"><div class="caption">Flower Bouquet 💐 — 2025.01.18</div>
+<img src="images/10.jpg"><div class="caption">Boolband 🤪 — 2025.02.07</div>
+<img src="images/11.jpg"><div class="caption">Last Valentine 💌 — 2025.02.14</div>
+<img src="images/12.jpg"><div class="caption">Bellwood 🤍 — 2025.04.08</div>
 <img src="images/13.jpg"><div class="caption">@Java ☕️  — 2025.06.20</div>
 </div>
 
@@ -459,12 +467,12 @@ I made this just for you ❤️</p>
 Watch in 720p and please watch till the end… something special 💘
 </p>
 
-<p style="font-size:13px;margin-top:10px;">
-Use the menu icon on the top‑left corner to move between pages ❤️‍🔥
-</p>
+
 </div>
 
-
+<p style="font-size:13px;margin-top:10px;">
+*Use the menu icon on the top‑left corner to move between pages ❤️‍🔥
+</p>
 
 <script>
 function checkCode(){
