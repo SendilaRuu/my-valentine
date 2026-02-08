@@ -179,8 +179,9 @@ margin-bottom:10px;
 
 .lockHeader {
     position: absolute;
-    top: 20px; /* distance from top */
-    width: 100%;
+    top: 50px; /* distance from top */
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
     z-index: 2100;
 }
@@ -190,29 +191,37 @@ margin-bottom:10px;
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 700; /* bold */
     text-transform: uppercase;
-    color: ##ea9999;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    color: #ea9999; /* corrected */
     line-height: 1.1;
+
+    /* Glow / Neon effect */
+    text-shadow: 
+        0 0 5px #ff4fa3,
+        0 0 10px #ff4fa3,
+        0 0 15px #ff80c8,
+        0 0 20px #ff80c8,
+        0 0 30px #ffb6c1;
 }
 
 .lockHeader .line1 {
-    font-size: 90px; /* big */
+    font-size: 120px; /* eye-catching big */
 }
 
 .lockHeader .line2 {
-    font-size: 70px; /* slightly smaller */
-    margin-top: 10px;
+    font-size: 90px; /* slightly smaller */
+    margin-top: 15px;
 }
 
 /* Responsive for mobile */
 @media screen and (max-width: 600px) {
     .lockHeader .line1 {
-        font-size: 40px;
+        font-size: 50px;
     }
     .lockHeader .line2 {
-        font-size: 30px;
+        font-size: 40px;
     }
 }
+
 
     
 input{
@@ -370,7 +379,7 @@ font-size:17px;
     <!-- LOCK HEADER -->
     <div class="lockHeader">
         <div class="line1">HEY MY PRINCESS RUU ❤️‍🔥</div>
-        <div class="line2">HAPPY VALENTINE'S DAY PUK IRI 💘🌊</div>
+        <div class="line2">HAPPY VALENTINE'S DAY BABY 💘🌊</div>
     </div>
 
     <!-- LOCK BOX -->
