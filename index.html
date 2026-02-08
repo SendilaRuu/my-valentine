@@ -179,7 +179,7 @@ margin-bottom:10px;
 
 .lockHeader {
     position: absolute;
-    top: 30px; /* space from top */
+    top: 30px; /* distance from top */
     width: 100%;
     text-align: center;
     z-index: 2100;
@@ -187,26 +187,32 @@ margin-bottom:10px;
 
 .lockHeader .line1,
 .lockHeader .line2 {
-    font-family: 'Bebas Neue', sans-serif; /* Bebas font */
-    font-size: 60px; /* big size */
+    font-family: 'Bebas Neue', sans-serif; /* fancy header font */
+    font-weight: 700; /* make it bold */
     color: #ff4fa3; /* soft pink */
     text-shadow: 2px 2px 8px rgba(0,0,0,0.6); /* subtle shadow */
-    line-height: 1.2;
+    line-height: 1.1;
+    text-transform: uppercase; /* optional, looks clean */
+}
+
+.lockHeader .line1 {
+    font-size: 80px; /* very big for main line */
 }
 
 .lockHeader .line2 {
-    font-size: 50px; /* slightly smaller than first line */
-    margin-top: 10px; /* spacing between lines */
+    font-size: 60px; /* slightly smaller, still big */
+    margin-top: 15px; /* spacing between lines */
 }
 
 @media screen and (max-width: 600px) {
     .lockHeader .line1 {
-        font-size: 36px;
+        font-size: 44px;
     }
     .lockHeader .line2 {
-        font-size: 30px;
+        font-size: 34px;
     }
 }
+
 
     
 input{
