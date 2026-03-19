@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Ammi ❤️</title>
+<title>Only For You ❤️</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 body{
@@ -16,7 +18,138 @@ color:white;
 overflow-x:hidden;
 }
 
-/* LOCK SCREEN */
+/* BANNER PHOTO */
+.banner {
+    position: relative;
+    width: 100%;
+    max-width: 1000px; /* adjust max width if needed */
+    margin: 40px auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: auto; /* keep aspect ratio */
+    display: block;
+}
+
+.bannerOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.35); /* light black transparent */
+}
+
+.bannerText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    width: 90%;
+    padding: 0 10px;
+}
+
+.bannerText .mainText {
+    font-family: 'Great Vibes', cursive;
+    font-size: 64px; /* big for “US ❤️” */
+    font-weight: bold;
+    color: #ff4fa3; /* pink color */
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    margin-bottom: 10px;
+}
+
+.bannerText .subText {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px; /* very small */
+    color: #fff;
+    opacity: 0.9;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+
+/* ---------- MENU ---------- */
+#menuBtn{
+position:fixed;
+top:15px;
+left:15px;
+font-size:28px;
+z-index:1000;
+cursor:pointer;
+display:none;
+}
+
+#menu{
+position:fixed;
+top:0;
+left:-240px;
+width:240px;
+height:100%;
+background:#111;
+padding-top:70px;
+transition:.4s;
+z-index:999;
+}
+
+#menu a{
+display:block;
+padding:15px;
+color:white;
+text-decoration:none;
+border-bottom:1px solid #222;
+}
+
+#menu a:hover{background:#ff4fa3;}
+
+/* ---------- PAGES ---------- */
+.page{
+display:none;
+min-height:100vh;
+padding:80px 20px 40px;
+text-align:center;
+}
+
+/* ---------- FLOATING HEARTS ---------- */
+#hearts{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:0;
+overflow:hidden;
+}
+
+.heart{
+position:absolute;
+bottom:-50px;
+font-size:18px;
+animation:floatUp linear forwards;
+opacity:.8;
+filter:drop-shadow(0 0 6px rgba(255,105,180,.7));
+}
+
+@keyframes floatUp{
+0%{
+transform:translateY(0) scale(0.8);
+opacity:0;
+}
+10%{
+opacity:.9;
+}
+100%{
+transform:translateY(-110vh) scale(1.3);
+opacity:0;
+}
+}
+
+
+/* ---------------- LOCK SCREEN ---------------- */
 #lockScreen{
 position:fixed;
 width:100%;
@@ -28,169 +161,396 @@ align-items:center;
 z-index:2000;
 }
 
-.lockHeader{
-position:absolute;
-top:30px;
-width:100%;
-text-align:center;
-}
-
-.lockHeader .line1{
-font-family:'Bebas Neue';
-font-size:50px;
-color:#ff4fa3;
-}
-
-.lockHeader .line2{
-font-size:28px;
-margin-top:10px;
-}
-
 .lockBox{
 background:rgba(255,255,255,0.08);
-padding:30px;
-border-radius:20px;
+backdrop-filter:blur(15px);
+padding:40px 25px;
+border-radius:25px;
 text-align:center;
-width:280px;
+box-shadow:0 0 40px rgba(255,105,180,0.5);
+width:300px;
 }
 
+.lockBox h2{
+font-family:'Great Vibes',cursive;
+font-size:34px;
+margin-bottom:10px;
+}
+
+.lockHeader {
+    position: absolute;
+    top: 20px; /* distance from top */
+    width: 100%;
+    text-align: center;
+    z-index: 2100;
+}
+
+.lockHeader .line1,
+.lockHeader .line2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 700; /* bold */
+    text-transform: uppercase;
+    color: ##ea9999;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    line-height: 1.1;
+
+     /* Glow / Neon effect */
+    text-shadow: 
+        0 0 5px #ff4fa3,
+        0 0 10px #ff4fa3,
+        0 0 15px #ff80c8,
+        0 0 20px #ff80c8,
+        0 0 30px #ffb6c1;
+}
+
+.lockHeader .line1 {
+    font-size: 70px; /* big */
+}
+
+.lockHeader .line2 {
+    font-size: 50px; /* slightly smaller */
+    margin-top: 10px;
+}
+
+/* Responsive for mobile */
+@media screen and (max-width: 600px) {
+    .lockHeader .line1 {
+        font-size: 40px;
+    }
+    .lockHeader .line2 {
+        font-size: 30px;
+    }
+}
+  
+    
 input{
-padding:12px;
-border-radius:20px;
+padding:14px;
+border-radius:30px;
 border:none;
-width:100%;
+font-size:18px;
 text-align:center;
+width:260px;
+outline:none;
 }
 
 button{
-padding:12px 25px;
+padding:14px 30px;
 border:none;
-border-radius:25px;
-background:#ff4fa3;
+border-radius:30px;
+background:linear-gradient(45deg,#ff4fa3,#ff80c8);
 color:white;
+font-size:18px;
 margin-top:15px;
+cursor:pointer;
+box-shadow:0 0 15px rgba(255,105,180,.6);
+transition:.3s;
 }
 
-/* PAGE */
-.page{
-display:none;
-padding:80px 20px;
-text-align:center;
+button:hover{
+transform:scale(1.05);
 }
 
-/* HEADINGS */
+/* START PAGE */
+#start{
+background:linear-gradient(135deg,#ff4fa3,#ff80c8,#ffd6b8);
+color:#3b0025;
+}
+
+/* WHY */
+#why{
+background:#0d0d0d;
+}
+
+/* LITTLE THINGS — NEW ATTRACTIVE THEME */
+#little{
+background:linear-gradient(160deg,#ffe4f1,#ffd6ec,#ffeef8);
+color:#5c0036;
+}
+
+/* headings */
 h1{
-font-family:'Great Vibes';
-font-size:40px;
+font-family:'Great Vibes',cursive;
+font-size:44px;
 }
 
-/* GALLERY (FIXED IMAGES) */
+/* PHOTOS */
 .gallery img{
 width:90%;
 max-width:320px;
 border-radius:20px;
-margin-top:20px;
+margin-top:18px;
+box-shadow:0 10px 25px rgba(255,105,180,0.5);
+transition:.4s;
 }
 
-/* FLOAT HEARTS */
-#hearts{
-position:fixed;
-width:100%;
-height:100%;
-pointer-events:none;
+.gallery img:hover{
+transform:scale(1.04);
 }
 
-.heart{
-position:absolute;
-bottom:-50px;
-animation:floatUp 6s linear forwards;
+.caption{
+opacity:.9;
+margin-bottom:30px;
+font-weight:500;
 }
 
-@keyframes floatUp{
-to{transform:translateY(-110vh);opacity:0;}
+/* footer quote */
+.quote{
+margin-top:40px;
+font-style:italic;
+opacity:.85;
 }
+
+/* ----- LAST PAGE LOVE LETTER SECTIONS ----- */
+
+.sectionBox{
+max-width:700px;
+margin:40px auto;
+padding:28px 24px;
+border-radius:22px;
+background:rgba(255,255,255,0.55);
+backdrop-filter:blur(12px);
+box-shadow:0 8px 30px rgba(255,105,180,.25);
+color:#5c0036;
+text-align:center;
+}
+
+.sectionBox h2{
+font-family:'Great Vibes',cursive;
+font-size:36px;
+margin-bottom:15px;
+}
+
+.sectionBox p{
+font-size:16px;
+line-height:1.8;
+}
+
+/* video card */
+.videoCard{
+margin:50px auto;
+max-width:420px;
+padding:25px;
+border-radius:20px;
+background:linear-gradient(135deg,#fff0f6,#ffe4f1);
+box-shadow:0 10px 30px rgba(255,105,180,.35);
+text-align:center;
+}
+
+.videoCard button{
+margin-top:15px;
+font-size:17px;
+padding:13px 26px;
+border-radius:40px;
+background:linear-gradient(45deg,#ff4fa3,#ff80c8);
+}
+
+.signature{
+margin-top:40px;
+font-style:italic;
+font-size:17px;
+}
+
 
 </style>
 </head>
 
 <body>
 
-<audio id="music" loop>
-<source src="assets/amma.mp3" type="audio/mp3">
-</audio>
-
+<!-- FLOATING HEARTS -->
 <div id="hearts"></div>
 
-<!-- LOCK -->
+
+<!-- MENU -->
+<div id="menuBtn" onclick="toggleMenu()">☰</div>
+
+<div id="menu">
+<a onclick="showPage('start')">Start Here</a>
+<a onclick="showPage('why')">Why You Matter</a>
+<a onclick="showPage('little')">Little Things</a>
+</div>
+
+<!-- MUSIC -->
+<audio id="music" loop>
+<source src="music.mp3" type="audio/mp3">
+</audio>
+
 <div id="lockScreen">
+    <!-- LOCK HEADER -->
+    <div class="lockHeader">
+        <br>
+        <div class="line1">HEY MY PRINCESS RUU ❤️‍🔥</div>
+        <div class="line2">HAPPY VALENTINE'S DAY BABY 💘🌊</div>
+    </div>
 
-<div class="lockHeader">
-<div class="line1">HEY AMMI ❤️</div>
-<div class="line2">HAPPY BIRTHDAY 🎂✨</div>
+    <!-- LOCK BOX -->
+    <div class="lockBox">
+        <h2>Enter Our Secret Date ❤️</h2>
+        <p style="opacity:.8;font-size:14px;">(Enter the date that changed everything)</p>
+        <input type="password" id="code" placeholder="yyyy.mm.dd">
+        <button onclick="checkCode()">Unlock</button>
+        <p id="error" style="color:#ff9aa2;margin-top:10px;"></p>
+    </div>
 </div>
 
-<div class="lockBox">
-<h2>Enter Special Date ❤️</h2>
-<input type="password" id="code" placeholder="yyyy.mm.dd">
-<button onclick="checkCode()">Unlock</button>
-<p id="error"></p>
-</div>
 
-</div>
 
-<!-- START -->
+<!-- START HERE -->
 <div id="start" class="page">
-<h1>Happy Birthday Ammi 🎂</h1>
+<h1>Hey, My Love 💘</h1>
 
 <p>
-You are the heart of our home ❤️<br><br>
-Everything I am today is because of you 🤍<br><br>
-Your love, your care, your strength…<br>
-means everything to me 🌸
+Before you go any further, pause for a moment 🌿✨<br><br>
+This isn’t just a website 🤍<br>
+It’s a small piece of my heart 💖<br>
+shaped with thoughts of you at every step 💭<br><br>
+I didn’t rush this 🕊️<br>
+I took my time — because you are worth it 🌸<br><br>
+Every word, every page, every feeling here exists for one reason… you ✨🤍<br><br>
+Please view this on your phone with sound on 🎧<br><br>
+I promise this will make you smile 😊💖
 </p>
 
-<button onclick="showPage('memories')">See Memories 💖</button>
+<button onclick="showPage('why')">Begin 💞</button>
+
+<p class="quote">“No matter where life takes us, I choose you — every single time."</p>
+    </p>
+    <p style="font-size:13px;margin-top:10px;">
+Made Date - 2026.01.28! ❤️
+</p>
 </div>
 
-<!-- MEMORIES -->
-<div id="memories" class="page">
-<h1>Our Memories 📸</h1>
+<!-- WHY -->
+<div id="why" class="page">
+<h1>Why You Matter to Me 💖</h1>
 
+<p>
+You came into my life quietly, but changed everything ✨.<br><br>
+You made ordinary days lighter and hard days easier 🥺❤️.<br><br>
+You bring calm into my chaos, light into my days, and warmth into my heart 🌸.<br><br>
+With you, I feel understood.<br>
+With you, I feel safe.<br>
+With you, I feel like myself ✨<br><br>
+You make me want to be better.<br>
+You make life feel softer.<br>
+And for that, I’ll always be grateful 🤍
+</p>
+
+<button onclick="showPage('little')">There’s More 💘</button>
+<p class="quote">“No matter where life takes us, I choose you — every single time."</p>
+  </p>
+    <p style="font-size:13px;margin-top:10px;">
+Made Date - 2026.01.28! ❤️
+</p>
+</div>
+
+<!-- LITTLE THINGS -->
+<div id="little" class="page">
+
+<h1>Our Little World 💞</h1>
+
+<!-- BANNER PHOTO -->
+<div class="banner">
+    <img src="images/banner.jpg" alt="Us Banner">
+    <div class="bannerOverlay"></div>
+    <div class="bannerText">
+        <div class="mainText">US ❤️</div>
+        <div class="subText">~ From the day you came into my life, everything felt a little warmer ~</div>
+    </div>
+</div>
+
+
+<!-- FROM ME TO YOU -->
+<div class="sectionBox">
+<h2>🌹 From Me to You</h2>
+<p>
+From the moment you walked into my life, everything felt softer, brighter, and more meaningful.  
+This little space is just for us — our memories, our love, and everything I feel for you.
+</p>
+</div>
+
+<!-- PHOTOS INTRO -->
+<div class="sectionBox">
+<h2>📸 Us, In Moments</h2>
+<p>
+Every photo here tells a story — laughs we shared, days we survived together, and memories I’ll always carry in my heart.
+</p>
+</div>
+
+<!-- GALLERY -->
 <div class="gallery">
-<img src="assets/1.jpg">
-<img src="assets/2.jpg">
-<img src="assets/3.jpg">
-<img src="assets/4.jpg">
-<img src="assets/5.jpg">
+<img src="images/1.jpg"><div class="caption">Our First Pic 📸 — 2024.11.18</div>
+<img src="images/2.jpg"><div class="caption">APT APT 😂💘 — 2024.12.02</div>
+<img src="images/3.jpg"><div class="caption">Pizza Hut 🍕 — .12.02</div>
+<img src="images/4.jpg"><div class="caption">Campus Eke 🎀 — 2024.12.03</div>
+<img src="images/5.jpg"><div class="caption">Dominos 😎 — 2024.12.09</div>
+<img src="images/6.jpg"><div class="caption">Dominos 🍕 — 2024.12.09</div>
+<img src="images/7.jpg"><div class="caption">Galpoththa 🌊 — 2024.12.17</div>
+<img src="images/8.jpg"><div class="caption">Vito Mug Day 🍵 — 2024.12.29</div>
+<img src="images/9.jpg"><div class="caption">Flower Bouquet 💐 — 2025.01.18</div>
+<img src="images/10.jpg"><div class="caption">Boolband 🤪 — 2025.02.07</div>
+<img src="images/11.jpg"><div class="caption">Last Valentine 💌 — 2025.02.14</div>
+<img src="images/12.jpg"><div class="caption">Bellwood 🤍 — 2025.04.08</div>
+<img src="images/13.jpg"><div class="caption">@Java ☕️  — 2025.06.20</div>
 </div>
 
-<button onclick="showPage('final')">Next ❤️</button>
-</div>
-
-<!-- FINAL -->
-<div id="final" class="page">
-<h1>I Love You Ammi ❤️</h1>
-
+<!-- NOTE -->
+<div class="sectionBox">
+<h2>💌 A Note Just for You</h2>
 <p>
-Thank you for every sacrifice 🥺<br>
-Thank you for every smile 😊<br><br>
+I don’t always know the perfect words, but I know this: loving you is the easiest thing I’ve ever done.  
+You make my bad days lighter, my good days better, and my life fuller just by being in it.
+<br><br>
+Thank you for loving me the way you do. Thank you for being patient, kind, and beautifully you.  
+I’m so grateful that I get to call you mine.
+</p>
+</div>
 
-No matter where life takes me,<br>
-I will always be your child 💖
+<!-- ALWAYS YOU -->
+<div class="sectionBox">
+<h2>💞 Always You</h2>
+<p>
+No matter where life takes us, no matter what comes next — I’ll always choose you.  
+Today, tomorrow, and every day after. 444 - Forever.
 </p>
 
+<div class="signature">
+— Yours, always<br>
+Buruwa...
 </div>
+</div>
+
+<!-- VIDEO -->
+<div class="videoCard">
+<p style="font-size:18px;"><strong>🎥 Before You Leave…</strong><br>
+I made this just for you ❤️</p>
+
+<a href="https://youtu.be/s_AzvXOVR_Y" target="_blank">
+<button>Watch This 💋</button>
+</a>
+
+<p style="margin-top:12px;font-size:14px;">
+Watch in 720p and please watch till the end… something special 💘
+</p>
+
+
+</div>
+
+<p style="font-size:13px;margin-top:10px;">
+*Use the menu icon on the top‑left corner to move between pages ❤️‍🔥
+</p>
+    <p style="font-size:13px;margin-top:10px;">
+Made Date - 2026.01.28! ❤️
+</p>
 
 <script>
-
-/* LOCK */
 function checkCode(){
-if(document.getElementById("code").value==="2006.10.9"){
+if(document.getElementById("code").value==="2024.10.24"){
 document.getElementById("lockScreen").style.display="none";
+document.getElementById("menuBtn").style.display="block";
 showPage('start');
 document.getElementById("music").play();
 }else{
-document.getElementById("error").innerText="Wrong code ❤️";
+document.getElementById("error").innerText="That’s not our date 🥺";
 }
 }
 
@@ -199,15 +559,40 @@ document.querySelectorAll(".page").forEach(p=>p.style.display="none");
 document.getElementById(id).style.display="block";
 }
 
-/* HEARTS */
-setInterval(()=>{
-let h=document.createElement("div");
-h.className="heart";
-h.innerHTML="❤";
-h.style.left=Math.random()*100+"%";
-document.getElementById("hearts").appendChild(h);
-setTimeout(()=>h.remove(),6000);
-},500);
+function toggleMenu(){
+let m=document.getElementById("menu");
+m.style.left = (m.style.left==="0px") ? "-240px" : "0px";
+}
+
+/* Floating Hearts Generator */
+function createHeart(){
+const heart = document.createElement("div");
+heart.className = "heart";
+heart.innerHTML = "❤";
+
+/* random position */
+heart.style.left = Math.random() * 100 + "vw";
+
+/* random size */
+heart.style.fontSize = (14 + Math.random()*22) + "px";
+
+/* random duration */
+heart.style.animationDuration = (5 + Math.random()*5) + "s";
+
+/* random slight movement */
+heart.style.transform = `translateX(${Math.random()*40-20}px)`;
+
+document.getElementById("hearts").appendChild(heart);
+
+/* remove after animation */
+setTimeout(()=>{
+heart.remove();
+},10000);
+}
+
+/* continuous hearts */
+setInterval(createHeart, 700);
+
 
 </script>
 
